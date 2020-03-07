@@ -1,0 +1,41 @@
+{
+  "name": "sitewhere-configuration-model",
+  "version": "3.0.0-alpha.1",
+  "description": "Provides a TypeScript model for SiteWhere microservice configuration",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
+    "test": "mocha src/test/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitewhere/sitewhere-configuration-model.git"
+  },
+  "keywords": [
+    "sitewhere",
+    "microservice",
+    "configuration"
+  ],
+  "author": "Derek Adams <derek.adams@sitewhere.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sitewhere/sitewhere-configuration-model/issues"
+  },
+  "homepage": "https://github.com/sitewhere/sitewhere-configuration-model#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.16.7",
+    "rollup-plugin-typescript2": "^0.22.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3"
+  }
+}
