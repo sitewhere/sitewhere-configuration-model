@@ -1,6 +1,6 @@
 import { IDatastoreDefinition } from "./datastore";
 /**
- * Common fields for PostgreSQL configuration.
+ * Configuration elements for device management tenant engine.
  */
 export interface IDeviceManagementConfiguration {
     datastore: IDatastoreDefinition | null;
