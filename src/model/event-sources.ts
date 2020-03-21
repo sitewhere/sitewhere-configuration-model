@@ -1,12 +1,18 @@
 import { IMqttConnectionConfiguration } from "./common";
 
+/** Event decoder information */
+export interface IEventDecoder {
+  type: string;
+  configuration: any;
+}
+
 /**
  * Format used to store event source data in a generic format.
  */
 export interface IEventSourceGenericConfiguration {
   id: string;
   type: string;
-  decoder: string;
+  decoder: IEventDecoder;
   configuration: any;
 }
 
