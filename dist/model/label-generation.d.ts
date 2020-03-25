@@ -1,0 +1,21 @@
+/**
+ * Label generator generic configuration.
+ */
+export interface ILabelGeneratorGenericConfiguration {
+    id: string;
+    name: string;
+    type: string;
+    configuration: any;
+}
+/**
+ * Label generator manager configuration.
+ */
+export interface ILabelGenerationManagerConfiguration {
+}
+/**
+ * Configuration elements for label generation tenant engine.
+ */
+export interface ILabelGenerationConfiguration {
+    manager: ILabelGenerationManagerConfiguration;
+    generators: ILabelGeneratorGenericConfiguration[];
+}
