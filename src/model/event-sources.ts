@@ -55,12 +55,12 @@ export interface ICoapServerConfiguration {
 export interface IEventHubConfiguration {
   consumerGroupName: string;
   namespaceName: string;
-  eventHubName: number;
-  sasKeyName: number;
-  sasKey: number;
-  storageConnectionString: number;
-  storageContainerName: number;
-  hostNamePrefix: number;
+  eventHubName: string;
+  sasKeyName: string;
+  sasKey: string;
+  storageConnectionString: string;
+  storageContainerName: string;
+  hostNamePrefix: string;
 }
 
 /**
