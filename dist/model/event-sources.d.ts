@@ -1,6 +1,6 @@
-import { IMqttConnectionConfiguration } from "./common";
+import { IMqttConnectionConfiguration, IScriptedComponentConfiguration } from "./common";
 /** Event decoder information */
-export interface IEventDecoder {
+export interface IEventDecoderGenericConfiguration {
     type: string;
     configuration: any;
 }
@@ -10,7 +10,7 @@ export interface IEventDecoder {
 export interface IEventSourceGenericConfiguration {
     id: string;
     type: string;
-    decoder: IEventDecoder;
+    decoder: IEventDecoderGenericConfiguration;
     configuration: any;
 }
 /**
@@ -69,4 +69,9 @@ export interface IRabbitMqConfiguration {
     numConsumers: number;
     reconnectInterval: number;
     durable: boolean;
+}
+/**
+ * Configuration for scripted event decoder.
+ */
+export interface IScriptedEventDecoderConfiguration extends IScriptedComponentConfiguration {
 }

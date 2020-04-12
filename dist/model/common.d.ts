@@ -17,3 +17,9 @@ export interface IMqttConnectionConfiguration {
     clientId: string;
     cleanSession: boolean;
 }
+/**
+ * Common base for scripted components.
+ */
+export interface IScriptedComponentConfiguration {
+    scriptId: string;
+}
