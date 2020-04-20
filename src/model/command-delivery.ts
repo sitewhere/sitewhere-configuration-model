@@ -1,7 +1,30 @@
+import { IMqttConfiguration } from "./common";
+
 /**
  * Generic router configuration properties.
  */
-export interface IGenericRouterConfiguration {
+export interface IRouterGenericConfiguration {
+  type: string;
+  configuration: any;
+}
+
+/**
+ * Single device type mapping of device token to destination.
+ */
+export type IDeviceTypeMapping = {
+  [token: string]: string;
+};
+
+/**
+ * Configuration for device type mapping router.
+ */
+export interface IDeviceTypeMappingRouterConfiguration {
+  mappings: IDeviceTypeMapping[];
+  defaultDestination: string;
+}
+
+/** Parameter extractor information */
+export interface IParameterExtractorGenericConfiguration {
   type: string;
   configuration: any;
 }
@@ -9,9 +32,10 @@ export interface IGenericRouterConfiguration {
 /**
  * Generic command destination configuration.
  */
-export interface IGenericCommandDestinationConfiguration {
+export interface ICommandDestinationGenericConfiguration {
   id: string;
   type: string;
+  parameterExtractor: IParameterExtractorGenericConfiguration;
   configuration: any;
 }
 
@@ -19,6 +43,35 @@ export interface IGenericCommandDestinationConfiguration {
  * Configuration elements for command delivery tenant engine.
  */
 export interface ICommandDeliveryConfiguration {
-  router: IGenericRouterConfiguration;
-  commandDestinations: IGenericCommandDestinationConfiguration[];
+  router: IRouterGenericConfiguration;
+  commandDestinations: ICommandDestinationGenericConfiguration[];
+}
+
+/**
+ * Configuration for CoAP commmand destination.
+ */
+export interface ICoapCommandDestinationConfiguration {}
+
+/**
+ * Configuration for MQTT command destination.
+ */
+export interface IMqttCommandDestinationConfiguration
+  extends IMqttConfiguration {}
+
+/**
+ * Configuration for default MQTT parameter extractor.
+ */
+export interface IDefaultMqttParameterExtractorConfiguration {
+  commandTopicExpression: string;
+  systemTopicExpression: string;
+}
+
+/**
+ * Configuration for CoAP metadata parameter extractor.
+ */
+export interface IMetadataCoapParameterExtractorConfiguration {
+  hostnameMetadataField: string;
+  portMetadataField: string;
+  urlMetadataField: string;
+  methodMetadataField: string;
 }

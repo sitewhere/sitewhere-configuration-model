@@ -1,4 +1,4 @@
-import { IMqttConnectionConfiguration, IScriptedComponentConfiguration } from "./common";
+import { IMqttConfiguration, IScriptedComponentConfiguration } from "./common";
 /** Event decoder information */
 export interface IEventDecoderGenericConfiguration {
     type: string;
@@ -58,7 +58,10 @@ export interface IEventHubConfiguration {
 /**
  * Configuration for MQTT event source.
  */
-export interface IMqttEventSourceConfiguration extends IMqttConnectionConfiguration {
+export interface IMqttEventSourceConfiguration extends IMqttConfiguration {
+    topic: string;
+    numThreads: number;
+    qos: number;
 }
 /**
  * Configuration for RabbitMQ event source.
