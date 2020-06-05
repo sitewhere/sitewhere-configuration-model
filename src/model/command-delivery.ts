@@ -11,8 +11,9 @@ export interface IRouterGenericConfiguration {
 /**
  * Single device type mapping of device token to destination.
  */
-export type IDeviceTypeMapping = {
-  [token: string]: string;
+export interface IDeviceTypeMapping {
+  deviceTypeToken: string;
+  destinationId: string;
 };
 
 /**
@@ -50,13 +51,13 @@ export interface ICommandDeliveryConfiguration {
 /**
  * Configuration for CoAP commmand destination.
  */
-export interface ICoapCommandDestinationConfiguration {}
+export interface ICoapCommandDestinationConfiguration { }
 
 /**
  * Configuration for MQTT command destination.
  */
 export interface IMqttCommandDestinationConfiguration
-  extends IMqttConfiguration {}
+  extends IMqttConfiguration { }
 
 /**
  * Configuration for default MQTT parameter extractor.

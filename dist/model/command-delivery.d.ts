@@ -9,9 +9,10 @@ export interface IRouterGenericConfiguration {
 /**
  * Single device type mapping of device token to destination.
  */
-export declare type IDeviceTypeMapping = {
-    [token: string]: string;
-};
+export interface IDeviceTypeMapping {
+    deviceTypeToken: string;
+    destinationId: string;
+}
 /**
  * Configuration for device type mapping router.
  */
