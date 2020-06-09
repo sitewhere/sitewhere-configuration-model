@@ -1,6 +1,6 @@
 {
   "name": "sitewhere-configuration-model",
-  "version": "3.0.0-alpha.4",
+  "version": "3.0.0-alpha.6",
   "description": "Provides a TypeScript model for SiteWhere microservice configuration",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

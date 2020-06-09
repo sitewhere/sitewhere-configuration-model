@@ -2,12 +2,9 @@
  * Default settings for auto registration device assignments.
  */
 export interface IAssignmentDefaults {
-  useDefaultDeviceType: boolean;
-  defaultDeviceTypeToken: string;
-  useDefaultCustomer: boolean;
-  defaultCustomerToken: string;
-  useDefaultArea: boolean;
-  defaultAreaToken: string;
+  defaultDeviceTypeToken: string | null;
+  defaultCustomerToken: string | null;
+  defaultAreaToken: string | null;
 }
 
 /**
