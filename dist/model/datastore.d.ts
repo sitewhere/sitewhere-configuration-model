@@ -16,9 +16,9 @@ export interface IDatastoreDefinitionLocal {
  */
 export declare type IDatastoreDefinition = IDatastoreDefinitionReference | IDatastoreDefinitionLocal;
 /**
- * Common fields for PostgreSQL configuration.
+ * Common fields for PostgreSQL client connection.
  */
-export interface PostgreSQLConfiguration {
+export interface IPostgreSQLConfiguration {
     hostname: string;
     port: number;
     username: string;
@@ -28,5 +28,22 @@ export interface PostgreSQLConfiguration {
 /**
  * Configuration for postgres95 dialect.
  */
-export interface Postgres95Configuration extends PostgreSQLConfiguration {
+export interface IPostgres95Configuration extends IPostgreSQLConfiguration {
+}
+/**
+ * Configuration for Warp 10 client connection.
+ */
+export interface IWarp10Configuration {
+    hostname: string;
+    port: number;
+    application: string;
+    tokenSecret: string;
+}
+/**
+ * Configuration for InfluxDB client connection.
+ */
+export interface IInfluxDBConfiguration {
+    hostname: string;
+    port: number;
+    databaseName: string;
 }
