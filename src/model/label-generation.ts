@@ -11,7 +11,7 @@ export interface ILabelGeneratorGenericConfiguration {
 /**
  * Label generator manager configuration.
  */
-export interface ILabelGenerationManagerConfiguration {}
+export interface ILabelGenerationManagerConfiguration { }
 
 /**
  * Configuration elements for label generation tenant engine.
@@ -19,4 +19,14 @@ export interface ILabelGenerationManagerConfiguration {}
 export interface ILabelGenerationConfiguration {
   manager: ILabelGenerationManagerConfiguration;
   generators: ILabelGeneratorGenericConfiguration[];
+}
+
+/**
+ * Configuration for QR Code label generator.
+ */
+export interface IQrCodeGeneratorConfiguration {
+  width: number;
+  height: number;
+  foregroundColor: string;
+  backgroundColor: string;
 }

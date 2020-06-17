@@ -19,3 +19,12 @@ export interface ILabelGenerationConfiguration {
     manager: ILabelGenerationManagerConfiguration;
     generators: ILabelGeneratorGenericConfiguration[];
 }
+/**
+ * Configuration for QR Code label generator.
+ */
+export interface IQrCodeGeneratorConfiguration {
+    width: number;
+    height: number;
+    foregroundColor: string;
+    backgroundColor: string;
+}
