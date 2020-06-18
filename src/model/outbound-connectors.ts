@@ -1,3 +1,5 @@
+import { IMqttConfiguration } from "./common";
+
 /**
  * Outbound connector generic configuration.
  */
@@ -12,4 +14,11 @@ export interface IOutboundConnectorGenericConfiguration {
  */
 export interface IOutboundConnectorsConfiguration {
   outboundConnectors: IOutboundConnectorGenericConfiguration[];
+}
+
+/**
+ * Configuration for MQTT outbound connector.
+ */
+export interface IMqttOutboundConnectorConfiguration extends IMqttConfiguration {
+  outboundTopic: string;
 }
