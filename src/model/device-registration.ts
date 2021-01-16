@@ -5,6 +5,7 @@ export interface IAssignmentDefaults {
   defaultDeviceTypeToken: string | null;
   defaultCustomerToken: string | null;
   defaultAreaToken: string | null;
+  defaultAssetToken: string | null;
 }
 
 /**
