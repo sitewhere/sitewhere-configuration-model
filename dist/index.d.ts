@@ -10,6 +10,7 @@ export * from "./model/event-management";
 export * from "./model/event-search";
 export * from "./model/event-sources";
 export * from "./model/inbound-processing";
+export * from "./model/instance-management";
 export * from "./model/label-generation";
 export * from "./model/outbound-connectors";
 export * from "./model/schedule-management";
